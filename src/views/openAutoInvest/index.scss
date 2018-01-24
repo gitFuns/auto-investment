@@ -1,0 +1,35 @@
+.open-auto-invest-page {
+  .img-warpper {
+    margin: .28rem .28rem .42rem;
+    height: 3.86rem;
+    background: url('./imgs/svip.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .btn-open {
+    margin: 0 auto;
+    width: 4.18rem;
+    height: .9rem;
+    line-height: .9rem;
+    color: #fff;
+    font-size: .32rem;
+    text-align: center;
+    background: url('../home/imgs/btn-balance.png') no-repeat center;
+    background-size: 100% 100%;
+    &:active {
+      opacity: .6;
+    }
+  }
+
+  .PageLinkerContainer {
+    margin: .58rem auto;
+  }
+
+  .PageRemarkContainer {
+    margin-bottom: .58rem;
+  }
+
+  .Loading {
+    height: 100px;
+  }
+}

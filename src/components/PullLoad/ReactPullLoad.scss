@@ -1,0 +1,165 @@
+.pull-load {
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pull-load-head{
+  position: absolute;
+  transform: translate3d(0px, -100%, 0px);
+  width: 100%;
+  .state-refreshing &,
+  .state-refreshed & {
+    position: relative;
+    transform: none;
+  }
+}
+
+.pull-load-body {
+  position: relative;
+  .state-refreshing & {
+    transition: transform .2s;
+  }
+  .state-reset & {
+    transition: transform .2s;
+  }
+}
+
+$bg-dark: #EFEFF4;
+
+$height: 1rem;
+$fontSize: 14px;
+
+$fontColor: darken($bg-dark, 40%);
+$btnColor: darken($bg-dark, 60%);
+
+$pullingMsg: '下拉刷新';
+$pullingEnoughMsg: '松开刷新';
+$refreshingMsg: '正在刷新...';
+$refreshedMsg: '刷新成功';
+$loadingMsg: '正在加载...';
+$btnLoadMore: '加载更多';
+$btnLoadNoMore: '没有更多';
+
+.pull-load-head-default {
+  text-align: center; font-size: $fontSize; line-height: $height; color: $fontColor;
+  &:after{
+    .state-pulling & {
+      content: $pullingMsg;
+    }
+    .state-pulling.enough & {
+      content: $pullingEnoughMsg;
+    }
+    .state-refreshing & {
+      content: $refreshingMsg;
+    }
+    .state-refreshed & {
+      content: $refreshedMsg;
+    }
+  }
+  .state-pulling & {
+    opacity: 1;
+    i {
+      display: inline-block;
+      font-size: 2em;
+      margin-right: .6em;
+      vertical-align: middle;
+      height: 20px;
+      border-left: 1px solid;
+      position: relative;
+      transition: transform .3s ease;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        font-size: 20px;
+        width: 10px;
+        bottom: 0px;
+        border-top: 1px solid;
+      }
+      &:before {
+        right: 1px;
+        transform: rotate(50deg);
+        transform-origin: right;
+      }
+      &:after {
+        left: 0px;
+        transform: rotate(-50deg);
+        transform-origin: left;
+      }
+    }
+  }
+  .state-pulling.enough & {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+  .state-refreshing & {
+    i {
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      border: 2px solid darken($bg-dark, 30%);
+      border-top-color: #fff;
+      border-radius: 100%;
+      animation: circle .8s infinite linear;
+    }
+  }
+  .state-refreshed & {
+    opacity: 1;
+    transition: opacity 1s;
+    i {
+      display: inline-block;
+      box-sizing: content-box;
+      vertical-align: middle;
+      margin-right: 10px;
+      font-size: 20px;
+      height: 20px;
+      width: 20px;
+      border: 1px solid;
+      border-radius: 100%;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 7px;
+        height: 11px;
+        width: 5px;
+        border: solid;
+        border-width: 0 1px 1px 0;
+        transform: rotate(40deg);
+      }
+    }
+  }
+}
+
+.pull-load-footer-default {
+  text-align: center; font-size: $fontSize; line-height: $height; color: $fontColor;
+  &:after {
+    .state-loading & {
+      content: $loadingMsg;
+    }
+  }
+  &.nomore:after {
+    content: attr(data-tip);
+  }
+  .state-loading & {
+    i {
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      border: 2px solid darken($bg-dark, 30%);
+      border-top-color: #fff;
+      border-radius: 100%;
+      animation: circle .8s infinite linear;
+    }
+  }
+}
+
+@keyframes circle {
+  100% { transform: rotate(360deg); }
+}

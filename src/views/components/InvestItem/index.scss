@@ -1,0 +1,51 @@
+.InvestItemContainer {
+  display: flex;
+  margin: .28rem .28rem 0;
+  padding: .36rem .28rem .36rem .36rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  .left {
+    flex: 0 0 1.26rem;
+    width: 1.26rem;
+    height: 1.22rem;
+    text-align: center;
+    background: url('./month.png') no-repeat center;
+    background-size: 100% 100%;
+    p:first-child {
+      padding-top: .18rem;
+      font-weight: bolder;
+      font-size: .58rem;
+      color: #fff;
+    }
+    p:last-child {
+      font-size: .26rem;
+      color: #fff;
+    }
+  }
+  .middle {
+    flex: 1;
+    padding: .1rem .36rem 0 .34rem;
+    text-align: center;
+  }
+  .right {
+    flex: 0 0 1.02rem;
+    width: 1.02rem;
+    height: .56rem;
+    color: #33b0f9;
+    text-align: center;
+    font-size: .26rem;
+    border-radius: .56rem;
+    border: .04rem solid #99d7fc;
+    box-sizing: content-box;
+    overflow: hidden;
+    &:active {
+      opacity: .6;
+    }
+    a {
+      display: block;
+      padding: .15rem 0;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.Loading {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  color: #999;
+  font-size: 15px;
+  text-align: center;
+
+  p {
+    flex: 1;
+  }
+
+  .loading-text {
+    vertical-align: 6px;
+  }
+
+  .loading-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: .3em;
+    background: url("./img/loading.svg") no-repeat;
+    background-size: cover;
+    animation: loadingIconSpinAnimate 1s steps(12, end) infinite;
+  }
+
+  @keyframes loadingIconSpinAnimate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

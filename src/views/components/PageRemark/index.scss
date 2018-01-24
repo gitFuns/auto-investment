@@ -1,0 +1,22 @@
+.PageRemarkContainer {
+  margin: 0 .28rem;
+  padding: .28rem;
+  min-height: 1rem;
+  color: #a1a1a1;
+  background: #fff;
+  font-size: 16px;
+  overflow: hidden;
+
+  .content {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .link {
+    color: #1e90fd;
+    text-decoration: underline;
+    &:active {
+      opacity: .6;
+    }
+  }
+}

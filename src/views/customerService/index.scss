@@ -1,0 +1,125 @@
+.customer-service-page {
+  .HeaderContainer {
+    padding: 0;
+  }
+  .avatar {
+    display: block;
+    margin: 0 auto;
+    padding: .28rem 0 .18rem;
+    width: 1.24rem;
+    height: 1.24rem;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+  .uname {
+    padding-bottom: .2rem;
+    text-align: center;
+    color: #fff;
+    font-size: .26rem;
+  }
+  .rights-wrapper {
+    .title {
+      padding: .3rem 0 .3rem;
+      font-size: .26rem;
+      color: #9b9b9b;
+      text-align: center;
+    }
+    .rights-item {
+      position: relative;
+      margin: 0 .28rem;
+      padding: .28rem;
+      background: #fff;
+      overflow: hidden;
+      &.border:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: .28rem;
+        right: .28rem;
+        height: 1px;
+        background: #eee;
+      }
+    }
+    .rights-name {
+      color: #1a1a1a;
+      font-size: .26rem;
+    }
+    .rights-time-info, .rights-status {
+      padding-top: .2rem;
+      color: #a1a1a1;
+      font-size: .24rem;
+    }
+    .rights-status {
+      span, p {
+        float: left;
+      }
+      p span {
+        margin-left: .14rem;
+      }
+      .btn-link {
+        color: #1e90fd;
+        text-decoration: underline;
+        &:active {
+          opacity: .6;
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      display: inline-block;
+      right: .28rem;
+      top: 50%;
+      margin-top: -.28rem;
+      height: .56rem;
+      line-height: .56rem;
+      text-align: center;
+      font-size: .26rem;
+      border-radius: .56rem;
+      box-sizing: content-box;
+      &.disable {
+        color: #a7a7a7;
+        border-color: #ddd;
+      }
+      &:active {
+        opacity: .6;
+      }
+    }
+    .btn-renew {
+      width: 1.02rem;
+      color: #33b0f9;
+      border: 2px solid #99d7fc;
+    }
+    .btn-open {
+      width: 1.54rem;
+      color: #fff;
+      background: #33b1f9;
+    }
+  }
+  .PageRemarkContainer {
+    margin: .56rem .28rem;
+    background-color: inherit;
+  }
+  .hide {
+    display: none;
+  }
+  .modal {
+    width: 5.8rem;
+  }
+  .modal-header {
+    color: #333;
+  }
+  .modal-content {
+    font-size: 13px;
+    input {
+      margin-top: .2rem;
+      width: 3.6rem;
+      height: .64rem;
+      font-size: .28rem;
+      color: #333;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: .08rem;
+      outline: 0;
+    }
+  }
+}

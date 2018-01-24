@@ -1,0 +1,126 @@
+.RedPacketItemContainer {
+  display: flex;
+  height: 1.58rem;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  .left {
+    flex: 0 0 1.84rem;
+    width: 1.84rem;
+    height: 1.58rem;
+    text-align: center;
+    background: url('../imgs//redpacket.png') no-repeat center;
+    background-size: 100% 100%;
+    p {
+      padding-right: .1rem;
+    }
+    p:first-child {
+      padding-top: .3rem;
+      font-weight: bolder;
+      font-size: .56rem;
+      color: #fff;
+    }
+    span, p:last-child {
+      padding-top: .12rem;
+      font-size: .24rem;
+      color: #fff;
+    }
+  }
+  .center {
+    flex: 1;
+    height: 1.58rem;
+    background: #fff;
+    overflow: hidden;
+    .txt {
+      font-size: .24rem;
+      line-height: .5rem;
+      color: #a1a1a1;
+      text-align: center;
+    }
+    .content {
+      display: flex;
+      margin: 0 .26rem;
+      height: .54rem;
+      border: 1px solid #ebebeb;
+      box-sizing: content-box;
+      overflow: hidden;
+    }
+    input {
+      border: none;
+      outline: 0;
+      font-size: .26rem;
+      text-align: center;
+      color: #2ea7f7;
+    }
+    .btn {
+      position: relative;
+      display: inline-block;
+      flex: 0 0 .54rem;
+      height: .54rem;
+      width: .54rem;
+      font-size: .24rem;
+      text-align: center;
+      &.reduce {
+        i {
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: .26rem;
+          height: 1px;
+          background: #2ea7f7;
+          font-style: normal;
+        }
+        border-right: 1px solid #ebebeb;
+        &:active i {
+          opacity: .6;
+        }
+      }
+      &.increase {
+        font-size: .4rem;
+        border-left: 1px solid #ebebeb;
+        i:first-child {
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: .26rem;
+          height: 1px;
+          background: #2ea7f7;
+          font-style: normal;
+        }
+        i:last-child {
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: 1px;
+          height: .26rem;
+          background: #2ea7f7;
+          font-style: normal;
+        }
+        &:active i {
+          opacity: .6;
+        }
+      }
+      &.disable i {
+        background: #ebebeb !important;
+      }
+    }
+    .count {
+      flex: 1;
+      width: 1.92rem;
+    }
+  }
+  .right {
+    flex: 0 0 .88rem;
+    padding: .66rem 0;
+    width: .88rem;
+    color: #2ea7f7;
+    text-align: center;;
+    font-size: .26rem;
+    background: #fff;
+    border-left: 1px dashed #ebebeb;
+    box-sizing: content-box;
+    &:active {
+      opacity: .6;
+    }
+  }
+}

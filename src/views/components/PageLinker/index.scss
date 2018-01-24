@@ -1,0 +1,44 @@
+.PageLinkerContainer {
+  display: flex;
+  margin: 0 auto;
+  width: 4.18rem;
+  .left,
+  .right {
+    position: relative;
+    flex: 1;
+    color: #9b9b9b;
+    font-size: .26rem;
+    text-align: center;
+    &:active {
+      opacity: .6;
+    }
+  }
+
+  .left:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: .1rem;
+    width: 1px;
+    height: .36rem;
+    background: #bebebe;
+  }
+
+  a {
+    display: block;
+    padding: .1rem 0;
+  }
+
+  img {
+    display: inline-block;
+    margin-right: .16rem;
+    width: .36rem;
+    height: .36rem;
+    vertical-align: middle;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

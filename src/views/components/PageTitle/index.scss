@@ -1,0 +1,35 @@
+.PageTitleContainer {
+  position: relative;
+  height: 1.02rem;
+  font-size: .32rem;
+  background: #fff;
+
+  .btn-back {
+    position: absolute;
+    left: 0;
+    height: 1.02rem;
+    padding: .35rem .3rem;
+    color: #33b0f9;
+    &:before {
+      display: inline-block;
+      margin-right: .04rem;
+      width: .22rem;
+      height: .22rem;
+      transform: rotateZ(-45deg);
+      border-top: 1px solid #33b0f9;
+      border-left: 1px solid #33b0f9;
+      background-color: #fff;
+      content: '';
+    }
+    &:active {
+      opacity: .6;
+    }
+  }
+
+  .page-title {
+    padding-top: .35rem;
+    color: #1a1a1a;
+    height: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,46 @@
+html {
+  font-family: 'microsoft yahei', "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input, button, select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  line-height: 1;
+  -webkit-appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type=search] { -webkit-appearance: none; }
+::-webkit-search-cancel-button { -webkit-appearance: none; }
+::-webkit-search-results-button { -webkit-appearance: none; }
+
+.geetest_panel * {
+  box-sizing: content-box;
+}
+
+html, body {
+  max-width: 750px;
+  min-width: 320px;
+  min-height: 100%;
+  background: #f5f5f5;
+  width: 100%;
+}
+
+ul, ul li {
+  list-style: none;
+}

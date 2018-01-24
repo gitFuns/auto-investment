@@ -1,0 +1,214 @@
+.auto-invest-service-page {
+  .account-info {
+    padding: 0 .38rem;
+    height: .98rem;
+    line-height: .98rem;
+    font-size: .26rem;
+    color: #1a1a1a;
+    .left {
+      float: left;
+    }
+    .uname {
+      padding-left: .18rem;
+      color: #ff5256;
+    }
+    .right {
+      float: right;
+    }
+    .balance {
+      margin-left: .1rem;
+    }
+    .recharge {
+      padding-left: .14rem;
+      color: #33b0f9;
+      &:active {
+        opacity: .6;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    margin: 0 .28rem .3rem;
+    padding-left: .28rem;
+    padding-right: .14rem;
+    height: 1.12rem;
+    background: #fff;
+  }
+  .i-checked {
+    position: absolute;
+    display: inline-block;
+    left: .28rem;
+    top: 50%;
+    margin-top: -.15rem;
+    width: .3rem;
+    height: .3rem;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    &:after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -.08rem;
+      margin-left: -.08rem;
+      content: '';
+      display: inline-block;
+      width: .16rem;
+      height: .16rem;
+      background: #caa76c;
+      border-radius: 50%;
+    }
+  }
+  .month {
+    margin-left: .5rem;
+    padding-left: .84rem;
+    height: 1.12rem;
+    line-height: 1.12rem;
+    color: #1a1a1a;
+    font-size: .3rem;
+    background: url('./imgs/month-icon.png') no-repeat left center;
+    background-size: .58rem .62rem;
+  }
+  .cost {
+    position: absolute;
+    right: .14rem;
+    top: .14rem;
+    width: 1.4rem;
+    height: .84rem;
+    line-height: .84rem;
+    font-size: .32rem;
+    text-align: center;
+    color: #fff;
+    background-color: #d3b67f;
+    border-radius: .04rem;
+  }
+  .auto-renew {
+    margin-left: .56rem;
+    margin-bottom: .7rem;
+    color: #1a1a1a;
+    font-size: .26rem;
+    label {
+      padding: .1rem 0;
+      &:active {
+        opacity: .6;
+      }
+    }
+    .checkbox {
+      position: relative;
+      display: inline-block;
+      margin-right: .24rem;
+      height: .3rem;
+      width: .3rem;
+      background: #fff;
+      border-radius: .04rem;
+      outline: 0;
+      border: 1px solid #eee;
+      vertical-align: middle;
+      &:checked:after {
+        position: absolute;
+        display: inline-block;
+        width: .2rem;
+        height: .2rem;
+        background: #caa76c;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+      }
+    }
+  }
+  .btn-confirm {
+    margin: 0 auto;
+    width: 4.18rem;
+    height: .9rem;
+    color: #fff;
+    font-size: .34rem;
+    text-align: center;
+    line-height: .9rem;
+    background: url('../home/imgs/btn-balance.png') no-repeat center;
+    background-size: 100% 100%;
+    &:active {
+      opacity: .6;
+    }
+  }
+  .PageLinkerContainer {
+    margin: .58rem auto;
+  }
+  .modal {
+    width: 5.8rem;
+  }
+  .modal-header {
+    color: #333;
+  }
+  .modal-content {
+    font-size: 13px;
+    input {
+      margin-top: .2rem;
+      width: 3.6rem;
+      height: .64rem;
+      font-size: .28rem;
+      color: #333;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: .08rem;
+      outline: 0;
+    }
+  }
+  .open-success {
+    position: fixed;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    opacity: 1;
+    background: rgba(0, 0, 0, .8);
+    transform: scale(1, 1);
+    transition: all .3s;
+    font-size: 0.32rem;
+    &.close {
+      opacity: 0;
+      transform: scale(1.1, 1.1);
+      pointer-events: none;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -3.3rem;
+      margin-top: -3.3rem;
+      padding-top: 2.6rem;
+      width: 6.6rem;
+      height: 6.6rem;
+      color: #333;
+      text-align: center;
+      background: url(./imgs/success.png) no-repeat center;
+      background-size: 6.6rem 6.6rem;
+    }
+    .success-tip,
+    .success-tip1 {
+      font-size: .36rem;
+      font-weight: bold;
+    }
+    .high-light {
+      display: inline-block;
+      padding-top: .1rem;
+      padding-right: .14rem;
+      color: #d3b67f;
+    }
+    .success-tip2 {
+      padding-top: .26rem;
+      font-size: .26rem;
+    }
+    .success-tip3 {
+      padding-top: .1rem;
+      font-size: .26rem;
+    }
+    .success-btn {
+      margin: .26rem auto 0;
+      width: 4rem;
+      height: .68rem;
+      line-height: .68rem;
+      font-size: .3rem;
+      color: #fff;
+      background: #d3b67f;
+      border-radius: .08rem;
+    }
+  }
+}

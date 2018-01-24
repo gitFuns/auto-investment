@@ -1,0 +1,63 @@
+.InvestListContainer {
+  margin: .58rem .28rem 0 ;
+  .invest-list-item {
+    padding: .26rem .32rem .36rem;
+    &.investing {
+      background: #fff url('./investing.png') no-repeat;
+      background-position: 82% 0;
+      background-size: .98rem .8rem;
+    }
+    &.invested {
+      background: #fff url('./invested.png') no-repeat;
+      background-position: 82% 0;
+      background-size: .98rem .8rem;
+      .item-header,
+      .amount,
+      .red-packet,
+      .profit {
+        color: #a7a7a7;
+      }
+    }
+  }
+  .item-header {
+    position: relative;
+    font-size: .24rem;
+    color: #6f6f6f;
+    .duration {
+      margin-left: .12rem;
+    }
+    .arrow-right {
+      position: absolute;
+      margin-top: -.18rem;
+      right: 0;
+      top: 50%;
+      width: .36rem;
+      height: .36rem;
+      background: url('./arrow-right.png') no-repeat center;
+      background-size: 100% 100%;
+    }
+  }
+  .item-container {
+    display: flex;
+  }
+  .item-content {
+    flex: 1;
+    padding: .58rem 0 0;
+    text-align: center;
+    p {
+      color: #a7a7a7;
+      font-size: .24rem;
+    }
+    .amount {
+      padding: .16rem 0 .2rem;
+      color: #1a1a1a;
+      font-size: .28rem;
+    }
+    .red-packet,
+    .profit {
+      padding-bottom: .2rem;
+      color: #1a1a1a;
+      font-size: .42rem;
+    }
+  }
+}

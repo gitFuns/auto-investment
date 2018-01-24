@@ -1,0 +1,69 @@
+.auto-invest-with-red-packet-page {
+  position: relative;
+  .HeaderContainer {
+    padding: 0;
+  }
+  .list {
+    display: flex;
+    padding: .4rem 0 0;
+    .list-item {
+      flex: 1;
+      text-align: center;
+    }
+    .list-item-title {
+      color: #d7eafc;
+      font-size: .24rem;
+    }
+    .list-item-value {
+      padding: .24rem 0 .26rem;
+      font-size: .42rem;
+      color: #fff217;
+    }
+  }
+  .header-footer {
+    padding-bottom: .4rem;
+    color: #fff;
+    font-size: .24rem;
+    text-align: center;
+  }
+  .invest-list-container {
+    margin-bottom: 1.2rem;
+  }
+  .InvestItemContainer {
+    .rate,
+    .amount {
+      text-align: left;
+      color: #6f6f6f;
+      font-size: .24rem;
+    }
+    .rate {
+      padding-bottom: .1rem;
+    }
+    .count {
+      margin-top: .1rem;
+      padding-left: .52rem;
+      height: .36rem;
+      line-height: .36rem;
+      font-size: .24rem;
+      text-align: left;
+      color: #ff6600;
+      background: url('../imgs//red-packet.png') no-repeat left center;
+      background-size: .36rem .36rem;
+    }
+  }
+  .modal-header {
+    color: #333;
+  }
+  .modal-content {
+    input {
+      width: 3.6rem;
+      height: .64rem;
+      font-size: .28rem;
+      color: #333;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: .08rem;
+      outline: 0;
+    }
+  }
+}

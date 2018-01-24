@@ -1,0 +1,94 @@
+.Button {
+  display: block;
+  padding: 12px 1em;
+  box-sizing: border-box;
+  line-height: 1;
+  text-align: center;
+  font-size: 16px;
+  background-color: transparent;
+  transition: all .2s;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 3px;
+  background-clip: padding-box;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.ButtonDefault {
+  color: #666;
+  background-color: #fff;
+  border: 1px lighten(#d8d8d8, 5%) solid;
+
+  &:hover {
+    background-color: lighten(#ededed, 4%);
+  }
+
+  &:active {
+    opacity: .6;
+  }
+}
+
+.ButtonPrimary {
+  color: #fff;
+  background-color: #4772FC;
+  border: 1px #4772FC solid;
+
+  &:hover {
+    background-color: darken(#4772FC, 5%);
+  }
+
+  &:active {
+    background-color: darken(#4772FC, 10%);
+  }
+}
+
+.ButtonWarning {
+  color: #fff;
+  background-color: lighten(#d8243c, 10%);
+  border: 1px lighten(#d8243c, 10%) solid;
+
+  &:hover {
+    background-color: darken(#d8243c, 5%);
+  }
+
+  &:active {
+    color: #fff;
+    background-color: lighten(#d8243c, 5%);
+    border-color: lighten(#d8243c, 5%);
+  }
+}
+
+.ButtonCorner {
+  padding-top: 16px;
+  background-color: #4da4e8;
+  padding-bottom: 16px;
+  border: 1px #4da4e8 solid;
+  color: #fff;
+  border-radius: 40px;
+  background-clip: padding-box;
+}
+
+.ButtonDisabled {
+  background-color: #fff !important;
+  color: #d8d8d8 !important;
+  border: 1px #ededed solid !important;
+  cursor: not-allowed;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.ButtonBlock {
+  display: block;
+}
+
+.button-submit {
+  display: none;
+}
