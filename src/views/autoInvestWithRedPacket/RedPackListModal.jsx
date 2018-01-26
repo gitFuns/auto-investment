@@ -13,6 +13,7 @@ class RedPacketListModal extends React.Component {
   render () {
     let redPacketMsg = ''
     let redPacketRule = this.props.redPacketRule
+    let ruleId = redPacketRule.id
     let redPacketList = redPacketRule.redPacketList || []
     let tipInfo = `当前设置投资期限为${redPacketRule.id}个月，预计年化收益最低${redPacketRule.rate}%`
 
@@ -32,19 +33,23 @@ class RedPacketListModal extends React.Component {
 
           <div className="red-packet-list-content">
             {
-              redPacketList.map((item) => {
-                return (
-                  <RedPacketItem
-                    key={item.id}
-                    ruleId={redPacketRule.id}
-                    onIncrease={redPacketRule.increase}
-                    onReduce={redPacketRule.reduce}
-                    onInput={redPacketRule.input}
-                    onSelectAll={redPacketRule.selectAll}
-                    {...item}
-                  />
-                )
-              })
+              redPacketList
+                .filter((item) => {
+                  return item.left_num > 0 || item.valueMap[ruleId].redpacket_num > 0
+                })
+                .map((item) => {
+                  return (
+                    <RedPacketItem
+                      key={item.id}
+                      ruleId={ruleId}
+                      onIncrease={redPacketRule.increase}
+                      onReduce={redPacketRule.reduce}
+                      onInput={redPacketRule.input}
+                      onSelectAll={redPacketRule.selectAll}
+                      {...item}
+                    />
+                  )
+                })
             }
           </div>
 

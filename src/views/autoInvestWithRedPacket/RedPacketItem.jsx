@@ -6,14 +6,6 @@ import './scss/redPacketItem.scss'
 class RedPackertItem extends React.Component {
   constructor (props) {
     super(props)
-
-    this.state = { redpacketNum: '' }
-  }
-
-  componentWillReceiveProps (nextProps) {
-    let redpacketNum = nextProps.valueMap[nextProps.ruleId].redpacket_num
-
-    this.setState({ redpacketNum: redpacketNum })
   }
 
   _handleIncreaseBtnClick = () => {
@@ -52,7 +44,7 @@ class RedPackertItem extends React.Component {
       })
   }
 
-  _handleInput = (event) => {
+  _handleChange = (event) => {
     if (!this.props.onInput) {
       return
     }
@@ -68,6 +60,8 @@ class RedPackertItem extends React.Component {
   }
 
   render () {
+    const redpacketNum = this.props.valueMap[this.props.ruleId].redpacket_num
+
     return (
       <div className="RedPacketItemContainer">
         <div className="left">
@@ -80,15 +74,15 @@ class RedPackertItem extends React.Component {
           <p className="txt">有效至{this.props.end_time}</p>
           <div className="content">
             <span
-              className={this.state.redpacketNum > 0 ? 'btn reduce' : 'btn reduce disable'}
+              className={redpacketNum > 0 ? 'btn reduce' : 'btn reduce disable'}
               onClick={this._handleReduceBtnClick}
             ><i />
             </span>
             <input
               type="text"
               className="count"
-              value={this.state.redpacketNum === 0 ? '' : this.state.redpacketNum}
-              onInput={this._handleInput}
+              value={redpacketNum === 0 ? '' : redpacketNum}
+              onChange={this._handleChange}
             />
             <span
               className={this.props.left_num > 0 ? 'btn increase' : 'btn increase disable'}
